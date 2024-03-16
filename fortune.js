@@ -12,10 +12,12 @@ const randomFortuneArr =
 
 function generator () {
     let fortune = randomFortuneArr[Math.floor(Math.random()* randomFortuneArr.length)]
-        return `A fortune you:  ${fortune}`;
+        return `A fortune you: ${fortune}`;
 }
 
 console.log(generator());
+
+
 
 
 
