@@ -1,0 +1,12 @@
+.background-image{
+    background-image: url("pexels-ave-calvar-martinez-4954706.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+header{
+    border-radius: 50% / 10%;
+  } 
+  
+  

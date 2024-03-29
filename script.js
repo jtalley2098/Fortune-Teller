@@ -1,3 +1,7 @@
+
+function ready(){
+
+
 const randomFortuneArr = 
 ["You will be eaten by a giant lizard if you go out.  Stay Home!", 
 "Love is in the air...always", 
@@ -19,5 +23,8 @@ console.log(generator());
 
 
 
+}
 
+
+document.addEventListener("DOMContentLoaded", ready);
 
