@@ -1,26 +1,71 @@
 .background-image{
-    background-image: url("pexels-ave-calvar-martinez-4954706.jpg");
+    
+    background-image: url("astronomy-1867616.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
 }
 header{
-
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     width: 100%;
-    
     overflow: auto;
     h1 {
         font-size: 70px;
         text-align: center;
         color: aliceblue;
         margin-top: 50px;
-        
-      }
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
       
 }
+.get-a-message{
+    padding: 20px;
+    border: solid 1px #999;
+    border-radius: 50%;
+    width: 17%;
+    margin: 10px 0 0 40%;
+    cursor: pointer;
+    background-color: #999;
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    .message-box{
+        width: 100%;
+        height: 200px;
+        
+        margin: 20px 0 0 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        .message{
+            opacity: 0;
+            font-size: 2.8rem;
+            text-align: center;
+        }
+        .message.visible{
+            opacity: 1;
+            transition: opacity 4s;
+            
+            font-style: bold;
+            color:aliceblue;
+
+        }
+        .message.hidden{
+            opacity: 0;
+            transition: opacity 4s;
+            
+            font-style: bold;
+            color:aliceblue;
+    }
+
+        
+}     
+
 
   
   

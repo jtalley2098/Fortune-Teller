@@ -2,6 +2,19 @@
 function ready(){
 
 
+const getMessage = document.querySelector('.get-a-message');
+
+getMessage.addEventListener('mouseover', ()=>{
+    getMessage.style.backgroundColor = 'aliceblue';
+});
+getMessage.addEventListener('mouseout', ()=>{
+    getMessage.style.backgroundColor = '#999';
+
+
+});
+
+
+
 const randomFortuneArr = 
 ["You will be eaten by a giant lizard if you go out.  Stay Home!", 
 "Love is in the air...always", 
@@ -16,10 +29,28 @@ const randomFortuneArr =
 
 function generator () {
     let fortune = randomFortuneArr[Math.floor(Math.random()* randomFortuneArr.length)]
-        return `A fortune you: ${fortune}`;
+        return `${fortune}`;
 }
+getMessage.addEventListener("click", displayMessage);
+const msgElement = document.querySelector('.message');
 
-console.log(generator());
+function displayMessage() {
+    const message = generator();
+   
+    msgElement.textContent = message;
+    msgElement.classList.add('visible');
+  
+    setTimeout(() => {
+     
+      msgElement.classList.add('hidden');
+      msgElement.textContent = message; 
+    }, 5000);
+      
+    msgElement.classList.remove('hidden'); 
+
+};
+
+
 
 
 
