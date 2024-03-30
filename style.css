@@ -32,6 +32,7 @@ header{
     background-color: #999;
         a{
             font-size: 1.2rem;
+            color:aliceblue;
         }
     }
     .message-box{
@@ -73,10 +74,10 @@ footer{
     background-color: #999;
     color: aliceblue;
     .talisman{
-        margin-left: 20px;
+        margin-left: 10px;
       }
       .location{
-        margin-right: 20px;
+        margin-right: 10px;
       }
     }
     

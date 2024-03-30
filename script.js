@@ -2,6 +2,16 @@
 function ready(){
 
 
+    
+
+    const audio = document.querySelector('audio');
+    document.addEventListener("DOMContentLoaded", (ready) =>{
+        audio.play();
+    });
+
+
+
+
 const getMessage = document.querySelector('.get-a-message');
 
 getMessage.addEventListener('mouseover', ()=>{
