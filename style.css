@@ -47,22 +47,20 @@ header{
             opacity: 0;
             font-size: 2.8rem;
             text-align: center;
+            
         }
         .message.visible{
             opacity: 1;
-            transition: opacity 4s;
-            
-            font-style: bold;
+            transition: opacity 7s;
             color:aliceblue;
 
         }
         .message.hidden{
             opacity: 0;
             transition: opacity 4s;
-            
-            font-style: bold;
             color:aliceblue;
     }
+   
 
         
 }     

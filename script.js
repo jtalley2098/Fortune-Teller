@@ -2,20 +2,18 @@
 function ready(){
 
 
-    
-
-    const audio = document.querySelector('audio');
-    document.addEventListener("DOMContentLoaded", () =>{
-        audio.play();
-    });
-
-
-
-
 const getMessage = document.querySelector('.get-a-message');
 
+
+getMessage.addEventListener("click", () =>{
+    const audio = document.querySelector('audio');
+    audio.volume = 0.2;
+    audio.play();
+   
+});
+
 getMessage.addEventListener('mouseover', ()=>{
-    getMessage.style.backgroundColor = 'aliceblue';
+    getMessage.style.backgroundColor = 'black';
 });
 getMessage.addEventListener('mouseout', ()=>{
     getMessage.style.backgroundColor = '#999';
@@ -36,7 +34,7 @@ const randomFortuneArr =
 "Persevere. Soon you will be like Zues on Mt Olympus!", 
 "Quit your job, abandon your family, independant people are happy people.",
 "You are not your job or how much money you have in the bank.",
-"Congratulations! You've been selected to participate in the grand cosmic game of 'Figure It the fuck out'.",
+"Congratulations! You've been selected to participate in the grand cosmic game of 'Figure it the fuck out'.",
 "Life's like a bowl of cosmic cereal... sometimes you find marshmallows, sometimes you find black holes.",
 "Just a heads up: Karma's on vacation. Enjoy the chaos.",
 "Jesus Christ has no idea who you bitches are.",
@@ -49,7 +47,7 @@ const randomFortuneArr =
 "The universe has a twisted sense of humor: it gives you existential dread as a birthday gift and then watches you scramble for meaning.",
 "Extraterrestials are real, they actualy like you, stop freaking out all the time.",
 "Go out for a pack of smokes and never come back.",
-"Observe how your mind makes meaning of events. This is the  greatest source of your suffering.",
+"Observe how your mind makes meaning of events. This is the greatest source of your suffering.",
 "The U.S. government planned 9/11.  Killing thousands of your own people.  'War makes money.'",
 "On holloween you're only getting candy corn.",
 "Christmas is a day to worship the (son) on the solstice.  Sun worshiper!",
@@ -62,23 +60,40 @@ function generator () {
 getMessage.addEventListener("click", displayMessage);
 const msgElement = document.querySelector('.message');
 
-function displayMessage() {
-    const message = generator();
-   
-    msgElement.textContent = message;
-    msgElement.classList.add('visible');
-  
-    setTimeout(() => {
-     
-      msgElement.classList.add('hidden');
-      msgElement.textContent = message; 
-    }, 5000);
+
+let buttonDisabled = false;
+
+    function displayMessage() {
+
+        buttonDisabled = true;
+        //disables getMessage button
+        getMessage.disabled = true;
+       
+        const message = generator();
+       
+        msgElement.textContent = message;
+        msgElement.classList.add('visible');
       
-    msgElement.classList.remove('hidden'); 
+        setTimeout(() => {
+         
+          msgElement.classList.add('hidden');
+          msgElement.textContent = message; 
+        }, 9000);
+          
+        msgElement.classList.remove('hidden'); 
+    
+        setTimeout(() => {
+            getMessage.disabled = false;
+            buttonDisabled = false;
+          }, 13000);
+    };
+  
 
-};
-
-
+getMessage.addEventListener('click', () => {
+    if(!buttonDisabled) {
+      displayMessage();
+    }
+  });
 
 
 
