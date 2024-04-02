@@ -1,16 +1,20 @@
 
 function ready(){
+  
+  document.addEventListener("click", () =>{
+    const audio = document.querySelector('audio');
+    audio.volume = 0.2;
+    audio.play();
+   
+  });
+
+  
 
 
 const getMessage = document.querySelector('.get-a-message');
 
 
-getMessage.addEventListener("click", () =>{
-    const audio = document.querySelector('audio');
-    audio.volume = 0.2;
-    audio.play();
-   
-});
+
 
 getMessage.addEventListener('mouseover', ()=>{
     getMessage.style.backgroundColor = 'black';
@@ -95,10 +99,11 @@ getMessage.addEventListener('click', () => {
     }
   });
 
-
+  
 
 }
 
 
 document.addEventListener("DOMContentLoaded", ready);
+
 
