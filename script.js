@@ -1,12 +1,32 @@
 
+
+
+
+
 function ready(){
+
+  function playAudio() {
+
+    const audio = document.querySelector('audio');
+    
   
-  document.addEventListener("click", () =>{
+    audio.volume = .2;
+  
+    audio.play();
+     
+
+  
+  }
+  
+  document.addEventListener("click", playAudio);
+  
+  
+  /*document.addEventListener("DOMContentLoaded", ()=>{
     const audio = document.querySelector('audio');
     audio.volume = 0.2;
     audio.play();
    
-  });
+  });*/
 
   
 
@@ -77,7 +97,7 @@ const randomFortuneArr =
 function generator () {
     let fortune = randomFortuneArr[Math.floor(Math.random()* randomFortuneArr.length)]
         return `${fortune}`;
-}
+};
 getMessage.addEventListener("click", displayMessage);
 const msgElement = document.querySelector('.message');
 
