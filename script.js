@@ -72,7 +72,7 @@ const randomFortuneArr =
 "Extraterrestials are real, they actualy like you, stop freaking out all the time.",
 "Go out for a pack of smokes and never come back.",
 "Observe how your mind makes meaning of events. This is the greatest source of your suffering.",
-"The U.S. government planned 9/11.  'War makes money.'",
+"The U.S. government planned 9/11 to start a war and steal your rights.",
 "On holloween you're only getting candy corn.",
 "Your lucky numbers are 666 and 13. Play them together for extra luck.",
 "Your misfortunes make me smile.",
@@ -85,7 +85,7 @@ const randomFortuneArr =
 "You will soon go on an adventure! Please make sure your life insurance is paid up first.",
 "Jealousy and envy follow you. Those hoes are nothing but trouble.",
 "True happiness will find you when you least expect it. Not today though. Or tomorrow. Or ever probably.",
-"Your leadership skills will soon be recognized. This is your chance to go down with the ship.",
+"Your leadership skills are being recognized. Time to go down with the ship.",
 "Fame and fortune await you soon. Unfortunately infamy and misfortune will get to you first.",
 "You have a deep well of untapped potential. Please keep it away from people.",
 "You will unlock unlimited power. Please use your new superpowers for evil.",
@@ -119,14 +119,14 @@ let buttonDisabled = false;
          
           msgElement.classList.add('hidden');
           msgElement.textContent = message; 
-        }, 9000);
+        }, 11000);
           
         msgElement.classList.remove('hidden'); 
     
         setTimeout(() => {
             getMessage.disabled = false;
             buttonDisabled = false;
-          }, 13000);
+          }, 18000);
     };
   
 
